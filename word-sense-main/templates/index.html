@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WordSense - Check Your Words</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="header-panel">
+        <h1>WordSense</h1>
+        <p class="sub-header">Detect Spam and Abusive Words</p>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form action="/predict_spam" method="post">
+                <label for="spam-message">Enter your message (for Spam Detection):</label>
+                <input type="text" id="spam-message" name="message" placeholder="Type your message here...">
+                <button type="submit" class="check-button-red">Check</button>
+            </form>
+            <form action="/predict_hate_speech" method="post">
+                <label for="hate-speech-message">Enter your message (for Hate Speech Detection):</label>
+                <input type="text" id="hate-speech-message" name="message" placeholder="Type your message here...">
+                <button type="submit" class="check-button-red">Check</button>
+            </form>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="info-section">
+            <div class="info-item">
+                <h2>What is Spam?</h2>
+                <p>Spam refers to unsolicited and irrelevant messages, often sent in bulk to a large number of recipients. These messages are usually promotional in nature and aim to promote products or services. Spam messages can be annoying and potentially harmful.</p>
+            </div>
+            <div class="info-item">
+                <h2>What are Abusive Words?</h2>
+                <p>Abusive words, also known as hate speech, are offensive and hurtful language that targets individuals or groups based on their race, ethnicity, gender, religion, or other characteristics. Hate speech can cause emotional distress and contribute to a toxic online environment.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
